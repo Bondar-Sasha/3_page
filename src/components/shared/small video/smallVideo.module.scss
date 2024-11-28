@@ -39,6 +39,9 @@
         height: 63px;
 
         &_videoName {
+            &:hover {
+                text-decoration: underline;
+            }
             color: rgb(25, 32, 44);
             font-size: 26px;
             font-weight: 700;

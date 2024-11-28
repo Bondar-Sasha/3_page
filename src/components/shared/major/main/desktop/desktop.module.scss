@@ -6,7 +6,14 @@ main {
 
 .main_content {
     width: calc(100vw - 437px - 40px - 80px);
-    background-color: blue;
-    height: calc(200vh);
     margin-left: 80px;
+    &_video {
+        width: 100%;
+        aspect-ratio: 1363 / 700;
+        // max-width: 1700px;
+        background-image: url('../../../../../data/main/Cover.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
