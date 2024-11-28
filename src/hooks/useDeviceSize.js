@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react"
+import { startTransition, useEffect, useState } from 'react'
 
 const useDeviceSize = () => {
     const [device_size, setDeviceSize] = useState({
         device_width: window.innerWidth,
-        device_height: window.innerHeight
+        device_height: window.innerHeight,
     })
 
     useEffect(() => {
         const handleResize = () =>
-            setDeviceSize({
-                device_width: window.innerWidth,
-                device_height: window.innerHeight
-            })
+            startTransition(() =>
+                setDeviceSize({
+                    device_width: window.innerWidth,
+                    device_height: window.innerHeight,
+                }),
+            )
         window.addEventListener('resize', handleResize)
 
         return () => {

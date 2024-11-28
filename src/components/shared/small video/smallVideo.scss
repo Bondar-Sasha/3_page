@@ -1,0 +1,65 @@
+@use '../../shared/mixins/flex' as flex_mixins;
+@use '../../shared/extends/flex';
+
+.small_video {
+    width: 100%;
+    cursor: pointer;
+    &_wrapper {
+        width: 367px;
+        flex: 0 0 auto;
+    }
+    &_previewContainer {
+        position: relative;
+        width: 100%;
+        &_wallpaper {
+            width: 100%;
+        }
+        &_timeContainer {
+            @extend %full_center;
+            position: absolute;
+            bottom: 9%;
+            right: 5%;
+            aspect-ratio: 47 / 24;
+            width: 47px;
+            border-radius: 12px;
+            background-color: rgb(0, 0, 0);
+            opacity: 0.3;
+
+            &_time {
+                font-size: 14px;
+                color: white;
+            }
+        }
+    }
+    &_information {
+        @include flex_mixins.center_j_d(space-between, column);
+        align-items: initial;
+        margin-top: 10px;
+        height: 40px;
+
+        @media screen and (max-width: 700px) {
+            margin-top: 8px;
+        }
+
+        &_videoName {
+            color: rgb(25, 32, 44);
+            font-size: clamp(16px, 50%, 18px);
+            font-weight: 700;
+        }
+        &_metricsContainer {
+            @include flex_mixins.center_j_d(space-between);
+            color: rgb(194, 194, 194);
+            font-size: 13px;
+            font-weight: 400;
+            &_views {
+            }
+            &_author {
+            }
+        }
+    }
+}
+@media (hover: hover) {
+    .small-video-information-videoName:hover {
+        text-decoration: underline;
+    }
+}

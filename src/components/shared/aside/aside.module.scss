@@ -1,0 +1,9 @@
+.aside {
+    display: flex;
+    position: fixed;
+    right: 0px;
+    top: 84px;
+    background-color: green;
+    height: calc(100vh - 84px);
+    width: 437px;
+}
