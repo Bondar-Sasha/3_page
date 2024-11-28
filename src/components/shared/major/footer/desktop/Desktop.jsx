@@ -1,10 +1,7 @@
-import React from 'react'
-// import MainInput from '../../../mainInput/MainInput'
-// import styles from './styles.module.css'
-// import AppLogo from '../../../logos/AppLogo'
+import styles from './styles.module.css'
 
 const Desktop = () => {
-    return <footer></footer>
+    return <footer className={styles.footer}></footer>
 }
 
 export default Desktop

@@ -6,9 +6,10 @@
     content: attr(data-count);
     position: absolute;
     display: flex;
-    z-index: 1;
     align-items: center;
     justify-content: center;
+    /* text-align: center; */
+    z-index: 1;
     color: white;
     font-size: 12px;
     top: 7px;

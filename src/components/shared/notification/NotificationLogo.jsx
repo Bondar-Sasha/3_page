@@ -1,4 +1,4 @@
-import styles from './notificationLogo.css'
+import styles from './notificationLogo.module.css'
 import Logo from './data/ui-11.png'
 
 const NotificationLogo = ({ className = '' }) => {

@@ -74,7 +74,7 @@
 
 .search_container {
     position: relative;
-    width: 52%;
+    width: 51.5%;
     @include flex_mixins.center_j_d(initial);
     height: clamp(35px, 3vw, 40px);
 

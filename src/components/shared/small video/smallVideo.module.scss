@@ -1,5 +1,5 @@
-@use '../../shared/mixins/flex' as flex_mixins;
-@use '../../shared/extends/flex';
+@use '../sharedStyles/mixins/flex' as flex_mixins;
+@use '../sharedStyles/extends/flex';
 
 .small_video {
     width: 100%;
@@ -7,6 +7,7 @@
     &_wrapper {
         width: 367px;
         flex: 0 0 auto;
+        margin-bottom: 30px;
     }
     &_previewContainer {
         position: relative;
@@ -17,8 +18,8 @@
         &_timeContainer {
             @extend %full_center;
             position: absolute;
-            bottom: 9%;
-            right: 5%;
+            bottom: 7%;
+            right: 3%;
             aspect-ratio: 47 / 24;
             width: 47px;
             border-radius: 12px;
@@ -34,22 +35,18 @@
     &_information {
         @include flex_mixins.center_j_d(space-between, column);
         align-items: initial;
-        margin-top: 10px;
-        height: 40px;
-
-        @media screen and (max-width: 700px) {
-            margin-top: 8px;
-        }
+        margin-top: 12px;
+        height: 63px;
 
         &_videoName {
             color: rgb(25, 32, 44);
-            font-size: clamp(16px, 50%, 18px);
+            font-size: 26px;
             font-weight: 700;
         }
         &_metricsContainer {
             @include flex_mixins.center_j_d(space-between);
             color: rgb(194, 194, 194);
-            font-size: 13px;
+            font-size: 18px;
             font-weight: 400;
             &_views {
             }

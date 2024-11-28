@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './smallVideo.scss'
+import styles from './smallVideo.module.scss'
 import VideoPicture from './data/Cover.png'
 
 const SmallVideo = () => {
@@ -18,11 +18,9 @@ const SmallVideo = () => {
                     </div>
                 </div>
                 <div className={styles.small_video_information}>
-                    <span className={styles.small_video_information_videoName}>A Brief History Of Creation</span>
+                    <span className={styles.small_video_information_videoName}>Baby Monitor Technology</span>
                     <div className={styles.small_video_information_metricsContainer}>
-                        <span className={styles.small_video_information_metricsContainer_views}>
-                            80k views&nbsp;&nbsp;·&nbsp;&nbsp;3 days ago
-                        </span>
+                        <span className={styles.small_video_information_metricsContainer_views}>123k views</span>
                         <span className={styles.small_video_information_metricsContainer_author}>Dollie Blair</span>
                     </div>
                 </div>
