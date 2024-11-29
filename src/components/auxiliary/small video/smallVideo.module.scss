@@ -6,6 +6,10 @@
     cursor: pointer;
     &_wrapper {
         width: 367px;
+        @media (width < 1000px) {
+            width: 100%;
+            max-width: 650px;
+        }
         flex: 0 0 auto;
         margin-bottom: 30px;
     }

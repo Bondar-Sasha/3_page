@@ -1,25 +1,26 @@
 import SubscribeButton from '../auxiliary/userVideoActions/subscribe/SubscribeButton'
 import styles from './style.module.scss'
 
-// import LikeAction from '../../userVideoActions/like/LikeAction'
-// import DislikeAction from '../../userVideoActions/dislike/DislikeAction'
-// import ShareAction from '../../userVideoActions/share/ShareAction'
-// import MoreAction from '../../userVideoActions/more/MoreAction'
-// import PauseIcon from '../.././../../data/main/Pause.png'
-// import VideoProgress from '../../progress/video/VideoProgress'
-// import SoundProgress from '../../progress/sound/SoundProgress'
-// import VolumeIcon from '../../../../data/main/Volume.png'
-// import NextVideoIcon from '../../../../data/main/Next.png'
-// import SubtitlesIcon from '../../../../data/main/Subtitles .png'
-// import FullScreenIcon from '../../../../data/main/Full Screen.png'
-// import SettingsIcon from '../../../../data/main/Settings.png'
-// import SizeVideoIcon from '../../../../data/main/Size.png'
-// import ChanelLogo from '../../../../data/main/Oval.png'
+import LikeAction from '../auxiliary/userVideoActions/like/LikeAction'
+import DislikeAction from '../auxiliary/userVideoActions/dislike/DislikeAction'
+import ShareAction from '../auxiliary/userVideoActions/share/ShareAction'
+import MoreAction from '../auxiliary/userVideoActions/more/MoreAction'
+import VideoProgress from '../auxiliary/progress/video/VideoProgress'
+import SoundProgress from '../auxiliary/progress/sound/SoundProgress'
+
+import PauseIcon from './img/Pause.png'
+import VolumeIcon from './img/Volume.png'
+import NextVideoIcon from './img/Next.png'
+import SubtitlesIcon from './img/Subtitles.png'
+import FullScreenIcon from './img/Full Screen.png'
+import SettingsIcon from './img/Settings.png'
+import SizeVideoIcon from './img/Size.png'
+import ChanelLogo from './img/Oval.png'
 
 const Main = () => {
     return (
         <main className={styles.main}>
-            {/* <div className={styles.main_content}>
+            <div className={styles.main_content}>
                 <div className={styles.main_content_video}>
                     <div className={styles.main_content_video_controllers}>
                         <div className={styles.main_content_video_controllers_time}>
@@ -81,7 +82,7 @@ const Main = () => {
                         <SubscribeButton />
                     </div>
                 </div>
-            </div> */}
+            </div>
         </main>
     )
 }

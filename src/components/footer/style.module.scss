@@ -16,7 +16,7 @@
         padding: 12px 22px 11px 24px;
         height: 61px;
         left: 0;
-        bottom: 61px;
+        bottom: 0px;
         &_container {
             @include flex_mixins.center_j_d(space-between);
 

@@ -1,7 +1,3 @@
-body > * {
-    width: 100%;
-}
-
 #root {
     background: rgb(255, 255, 255);
     display: flex;
@@ -9,7 +5,6 @@ body > * {
     justify-content: center;
     flex-direction: column;
 }
-#root > *:not(aside) {
+#root > * {
     box-sizing: border-box;
-    width: 100%;
 }

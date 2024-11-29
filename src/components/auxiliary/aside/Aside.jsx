@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './aside.module.scss'
+import styles from './style.module.scss'
 import Switch from '../switch/Switch'
 import SmallVideo from '../small video/SmallVideo'
 
