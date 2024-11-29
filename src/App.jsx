@@ -1,12 +1,17 @@
 import './App.css'
-import GetLayout from './components/devices'
-import useDeviceSize from './hooks/useDeviceSize'
-import identifyDevice from './utils/identifyDevice'
+import Aside from './components/auxiliary/aside/Aside'
+import Footer from './components/footer/Footer'
+import Header from './components/header/Header'
+import Main from './components/main/Main'
 
 function App() {
-    const { device_width } = useDeviceSize()
-
-    return GetLayout(identifyDevice(device_width))
+    return (
+        <>
+            <Header />
+            <Main />
+            <Footer />
+        </>
+    )
 }
 
 export default App

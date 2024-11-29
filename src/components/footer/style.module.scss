@@ -1,0 +1,54 @@
+@use '../../sharedStyles/mixins/flex.scss' as flex_mixins;
+@use '../../sharedStyles/extends/flex.scss';
+
+.footer {
+    height: 10px;
+    background-color: white;
+
+    &_container {
+        display: none;
+    }
+}
+
+@media (width < 768px) {
+    .footer {
+        position: sticky;
+        padding: 12px 22px 11px 24px;
+        height: 61px;
+        left: 0;
+        bottom: 61px;
+        &_container {
+            @include flex_mixins.center_j_d(space-between);
+
+            &_icon {
+                @include flex_mixins.center_j_d(space-between, column);
+                height: 36px;
+
+                & > span {
+                    color: rgb(137, 137, 137);
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media (width < 260px) {
+    .footer {
+        &_container {
+            &_icon:last-child {
+                display: none;
+            }
+        }
+    }
+}
+@media (width < 200px) {
+    .footer {
+        &_container {
+            &_icon:nth-last-child(2) {
+                display: none;
+            }
+        }
+    }
+}
