@@ -1,10 +1,11 @@
 .button {
-    height: 40px;
-    width: 70px;
+    /* height: fit-content;
+    width: fit-content; */
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 0px;
     background: rgba(235, 235, 235, 0);
     cursor: pointer;
 }

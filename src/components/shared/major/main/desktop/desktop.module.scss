@@ -1,3 +1,6 @@
+@use '../../../sharedStyles/mixins/flex.scss' as flex_mixins;
+@use '../../../sharedStyles/extends/flex.scss';
+
 main {
     display: flex;
     justify-content: flex-start;
@@ -7,13 +10,168 @@ main {
 .main_content {
     width: calc(100vw - 437px - 40px - 80px);
     margin-left: 80px;
+    display: flex;
+    flex-direction: column;
     &_video {
         width: 100%;
         aspect-ratio: 1363 / 700;
+        position: relative;
+        container: video / inline-size;
         // max-width: 1700px;
         background-image: url('../../../../../data/main/Cover.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @container video (width >= 1300px) {
+            .main_content_video {
+                &_controllers {
+                    &_progress {
+                        margin-top: 16px;
+                    }
+                    &_other {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+        @container video (width < 1300px) {
+            .main_content_video {
+                &_controllers {
+                    &_progress {
+                        margin-top: 13px;
+                    }
+                    &_other {
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+        @container video (width < 1100px) {
+            .main_content_video {
+                &_controllers {
+                    &_progress {
+                        margin-top: 7px;
+                    }
+                    &_other {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        &_controllers {
+            width: calc(100% - 66px);
+            bottom: 4.5%;
+            left: 33px;
+            position: absolute;
+            &_time {
+                & > span {
+                    color: rgb(255, 255, 255);
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+                @include flex_mixins.center_j_d(space-between);
+            }
+            &_progress {
+                cursor: pointer;
+            }
+            &_other {
+                @include flex_mixins.center_j_d(space-between);
+
+                padding: 0px 10px;
+
+                &_stop {
+                    min-width: 275px;
+
+                    & > * {
+                        cursor: pointer;
+                    }
+                    @include flex_mixins.center_j_d(space-between);
+
+                    width: 22%;
+                    & > :last-child {
+                        transform: translateX(-25%);
+                    }
+                }
+                &_picture {
+                    width: 15%;
+                    min-width: 170px;
+                    & > * {
+                        cursor: pointer;
+                    }
+                    @include flex_mixins.center_j_d(space-between);
+                }
+            }
+        }
+    }
+    &_videoHeader {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        &_name {
+            color: rgb(25, 38, 70);
+            font-size: 36px;
+            font-weight: 700;
+        }
+        &_actions {
+            margin-top: 14px;
+            @include flex_mixins.center_j_d(space-between);
+
+            &_views {
+                color: rgb(194, 194, 194);
+                font-size: 20px;
+                font-weight: 400;
+            }
+            &_handlers {
+                align-self: flex-start;
+
+                width: 10%;
+                min-width: 388px;
+                @include flex_mixins.center_j_d(space-between);
+            }
+        }
+    }
+    &_description {
+        margin-top: 50px;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_data {
+            width: 66%;
+            @include flex_mixins.center_j_d(space-between);
+            align-items: initial;
+
+            &_chanelLogo {
+            }
+            &_content {
+                margin-left: 8px;
+                display: flex;
+                flex-direction: column;
+                &_name {
+                    color: rgb(25, 32, 44);
+                    font-size: 26px;
+                    font-weight: 700;
+                }
+                &_publishedDate {
+                    margin-top: 6px;
+                    color: rgb(194, 194, 194);
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                &_text {
+                    color: rgb(0, 0, 0);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+                &_more {
+                    color: rgb(194, 194, 194);
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+        &_subscribe {
+            height: 100%;
+        }
     }
 }
