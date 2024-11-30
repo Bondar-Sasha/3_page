@@ -5,6 +5,8 @@
     justify-content: center;
     flex-direction: column;
 }
-#root > * {
+
+#root > *:not(aside) {
+    width: 100vw;
     box-sizing: border-box;
 }

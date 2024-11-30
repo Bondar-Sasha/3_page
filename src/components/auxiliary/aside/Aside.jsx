@@ -14,14 +14,16 @@ const Aside = () => {
                     <Switch />
                 </div>
             </div>
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
-            <SmallVideo />
+            <div className={styles.aside_videos}>
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+                <SmallVideo />
+            </div>
         </aside>
     )
 }

@@ -14,36 +14,21 @@
 .header_secondPart_wrapper_dotsIcon {
     display: none;
 }
+
 @media (hover: hover) {
     .header_firstPart {
-        & > div:first-child {
-            cursor: pointer;
-        }
-
         &_appLogo {
             cursor: pointer;
         }
     }
     .header_secondPart {
         &_wrapper {
-            &_otherLogos {
-                & > * {
-                    cursor: pointer;
-                }
-            }
             &_userIcon {
                 cursor: pointer;
             }
         }
     }
     .header_icons_wrapper {
-        @include flex_mixins.center_j_d(center);
-
-        height: 50px;
-
-        border-radius: 50%;
-        aspect-ratio: 1 / 1;
-
         &:hover {
             background-color: rgb(241, 241, 241);
 
@@ -59,6 +44,12 @@
 }
 
 @media (width >= 1440px) {
+    .header_icons_wrapper {
+        @include flex_mixins.center_j_d(center);
+        height: 50px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+    }
     .header_firstPart {
         width: 9.7%;
         min-width: 170px;
@@ -127,6 +118,12 @@
     }
 }
 @media (1024px <= width < 1440px) {
+    .header_icons_wrapper {
+        @include flex_mixins.center_j_d(center);
+        height: 50px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+    }
     .header_firstPart {
         width: 9.7%;
         min-width: 180px;
@@ -182,6 +179,9 @@
     }
 }
 @media (768px <= width < 1024px) {
+    .header {
+        padding: 0px 17px 0px 17px;
+    }
     .header_firstPart {
         width: 24%;
         min-width: 180px;

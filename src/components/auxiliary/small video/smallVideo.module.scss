@@ -1,18 +1,10 @@
 @use '../sharedStyles/mixins/flex' as flex_mixins;
 @use '../sharedStyles/extends/flex';
-
 .small_video {
-    width: 100%;
+    margin-bottom: 30px;
+    flex: 0 0 auto;
     cursor: pointer;
-    &_wrapper {
-        width: 367px;
-        @media (width < 1000px) {
-            width: 100%;
-            max-width: 650px;
-        }
-        flex: 0 0 auto;
-        margin-bottom: 30px;
-    }
+
     &_previewContainer {
         position: relative;
         width: 100%;
@@ -49,6 +41,9 @@
             color: rgb(25, 32, 44);
             font-size: 26px;
             font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &_metricsContainer {
             @include flex_mixins.center_j_d(space-between);
@@ -58,6 +53,62 @@
             &_views {
             }
             &_author {
+            }
+        }
+    }
+}
+
+@media (width > 1200px) {
+    .small_video {
+        width: 100%;
+    }
+}
+@media (760px <= width <= 1200px) {
+    .small_video {
+        width: 32%;
+        &_information {
+            &_videoName {
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media (560px <= width < 760px) {
+    .small_video {
+        width: 48%;
+        &_information {
+            &_videoName {
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media (560px > width) {
+    .small_video {
+        width: 100%;
+
+        &_previewContainer {
+            &_wallpaper {
+            }
+            &_timeContainer {
+                &_time {
+                }
+            }
+        }
+        &_information {
+            margin-top: 8px;
+            height: 40px;
+
+            &_videoName {
+                font-size: 16px;
+            }
+            &_metricsContainer {
+                font-size: 13px;
+
+                &_views {
+                }
+                &_author {
+                }
             }
         }
     }
