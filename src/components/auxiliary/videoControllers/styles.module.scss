@@ -1,0 +1,161 @@
+@use '../../../sharedStyles/mixins/flex.scss' as flex_mixins;
+@use '../../../sharedStyles/extends/flex.scss';
+
+.wrapper {
+    width: 100%;
+    container: controllers / inline-size;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 33px;
+    left: 0;
+}
+@media (width <= 500px) {
+    .wrapper {
+        width: 100%;
+        container: controllers / inline-size;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+    }
+}
+.controllers {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@container controllers (width >= 750px) {
+    .controllers {
+        padding: 0 33px;
+        &_time {
+            &_stopIcon {
+                display: none;
+            }
+            @include flex_mixins.center_j_d(space-between);
+            & > span {
+                color: rgb(255, 255, 255);
+                font-size: 22px;
+                font-weight: 400;
+            }
+        }
+        &_progress {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        &_other {
+            margin-top: 20px;
+
+            @include flex_mixins.center_j_d(space-between);
+
+            padding: 0px 10px;
+
+            &_stop {
+                &_time {
+                    display: none;
+                }
+                min-width: 275px;
+                max-width: 380px;
+
+                & > * {
+                    cursor: pointer;
+                }
+                @include flex_mixins.center_j_d(space-between);
+
+                width: 22%;
+                & > :last-child {
+                    transform: translateX(-25%);
+                }
+            }
+            &_picture {
+                width: 15%;
+                min-width: 170px;
+                max-width: 260px;
+                & > * {
+                    cursor: pointer;
+                }
+                @include flex_mixins.center_j_d(space-between);
+            }
+        }
+    }
+}
+@container controllers (width < 750px) {
+    .controllers {
+        width: 96%;
+        border-radius: 15px;
+        background-color: rgba(61, 61, 61, 0.6);
+        @include flex_mixins.center_j_d(space-between);
+        padding: 0 30px;
+
+        &_time {
+            width: 15%;
+            @include flex_mixins.center_j_d(space-between);
+            &_stopIcon {
+                // display: none;
+            }
+            & > span {
+                color: rgb(255, 255, 255);
+                font-size: 22px;
+                font-weight: 400;
+            }
+            & > span:last-child {
+                display: none;
+            }
+        }
+        &_progress {
+            cursor: pointer;
+            margin: 20px 0;
+            width: 55%;
+        }
+        &_other {
+            // padding: 0px 10px;
+            width: 19%;
+
+            &_stop {
+                width: 100%;
+                @include flex_mixins.center_j_d(space-between);
+                &_time {
+                    @include flex_mixins.center_j_d(space-between);
+
+                    // color: rgb(255, 255, 255);
+                    // font-size: 10px;
+                    // font-weight: 400;
+                    color: rgb(255, 255, 255);
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+
+                img[alt='PauseIcon'] {
+                    display: none;
+                }
+                img[alt='NextVideoIcon'] {
+                    display: none;
+                }
+                & > :last-child {
+                    display: none;
+                }
+            }
+            &_picture {
+                display: none;
+            }
+        }
+    }
+}
+@container controllers (width <= 320px) {
+    img[alt='NextVideoIcon'] {
+        display: none;
+    }
+    .controllers {
+        @include flex_mixins.center_j_d(space-between);
+        padding: 0 6px;
+        &_other_stop {
+        }
+        &_progress {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        &_other_picture {
+        }
+    }
+}

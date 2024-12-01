@@ -5,6 +5,7 @@
     padding: 0px 70px 0px 17px;
     @include flex_mixins.center_j_d(space-between);
     background-color: white;
+    width: 100vw;
     height: 84px;
     z-index: 10;
     position: fixed;
@@ -183,7 +184,7 @@
         padding: 0px 17px 0px 17px;
     }
     .header_firstPart {
-        width: 24%;
+        width: 19%;
         min-width: 180px;
         @include flex_mixins.center_j_d(space-between);
 
@@ -195,7 +196,7 @@
         }
     }
     .header_secondPart {
-        width: 70%;
+        width: 75%;
         @include flex_mixins.center_j_d(space-between);
         &_wrapper {
             @include flex_mixins.center_j_d(space-between);
