@@ -1,3 +1,11 @@
+@media (width <= 767px) {
+    .button {
+        span {
+            display: none;
+        }
+    }
+}
+
 .button {
     width: 154px;
     height: 40px;

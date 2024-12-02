@@ -6,6 +6,7 @@ import DislikeAction from '../auxiliary/userVideoActions/dislike/DislikeAction'
 import ShareAction from '../auxiliary/userVideoActions/share/ShareAction'
 import MoreAction from '../auxiliary/userVideoActions/more/MoreAction'
 import ChanelLogo from './img/Oval.png'
+import ArrowLogo from './img/Right Arrow.svg'
 import VideoControllers from '../auxiliary/videoControllers/VideoControllers'
 
 const Main = () => {
@@ -15,7 +16,12 @@ const Main = () => {
                 <VideoControllers />
             </div>
             <div className={styles.main_videoHeader}>
-                <span className={styles.main_videoHeader_name}>Dude You Re Getting A Telescope</span>
+                <span className={styles.main_videoHeader_name}>
+                    <span>Dude You Re Getting A Telescope</span>
+                    <span className={styles.main_videoHeader_name_arrow}>
+                        <img src={ArrowLogo} alt="ArrowLogo" />
+                    </span>
+                </span>
                 <div className={styles.main_videoHeader_actions}>
                     <span className={styles.main_videoHeader_actions_views}>123k views</span>
                     <div className={styles.main_videoHeader_actions_handlers}>
@@ -33,6 +39,7 @@ const Main = () => {
                     </div>
                     <div className={styles.main_description_data_content}>
                         <span className={styles.main_description_data_content_name}>Food & Drink</span>
+                        <span className={styles.main_description_data_content_subs}>245K subscribed</span>
                         <span className={styles.main_description_data_content_publishedDate}>
                             Published on 14 Jun 2019
                         </span>

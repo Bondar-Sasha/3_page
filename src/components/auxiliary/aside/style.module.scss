@@ -51,12 +51,13 @@
         }
     }
 }
-@media (width <= 1200px) {
+@media (501px <= width <= 1200px) {
     .aside {
         position: initial;
         justify-content: center;
         width: 100vw;
         padding: 0 16px;
+        margin-top: 20px;
 
         &_header {
             margin-bottom: 25px;
@@ -94,12 +95,22 @@
 }
 @media (width <= 500px) {
     .aside {
+        padding: 0 16px;
+
+        margin-top: 20px;
+
         &_header {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 13px;
             &_name {
                 font-size: 20px;
             }
             &_autoplayContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 99px;
                 &_label {
                     font-size: 10px;
                 }
