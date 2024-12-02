@@ -10,7 +10,18 @@
     bottom: 33px;
     left: 0;
 }
-@media (800px <= width <= 1300px) {
+@media (width >= 1300px) {
+    .wrapper {
+        width: 100%;
+        container: controllers / inline-size;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+    }
+}
+@media (800px <= width < 1300px) {
     .wrapper {
         width: 100%;
         container: controllers / inline-size;
