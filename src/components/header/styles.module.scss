@@ -1,0 +1,292 @@
+@use '../../sharedStyles/mixins/flex.scss' as flex_mixins;
+@use '../../sharedStyles/extends/flex.scss';
+
+.header {
+    padding: 0px 70px 0px 17px;
+    @include flex_mixins.center_j_d(space-between);
+    background-color: white;
+    width: 100vw;
+    height: 84px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header_secondPart_wrapper_dotsIcon {
+    display: none;
+}
+
+@media (hover: hover) {
+    .header_firstPart {
+        &_appLogo {
+            cursor: pointer;
+        }
+    }
+    .header_secondPart {
+        &_wrapper {
+            &_userIcon {
+                cursor: pointer;
+            }
+        }
+    }
+    .header_icons_wrapper {
+        &:hover {
+            background-color: rgb(241, 241, 241);
+
+            transition: opacity 0.5s ease;
+        }
+    }
+
+    .search_container {
+        &_logo {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (width >= 1440px) {
+    .header_icons_wrapper {
+        @include flex_mixins.center_j_d(center);
+        height: 50px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+    }
+    .header_firstPart {
+        width: 9.7%;
+        min-width: 170px;
+        max-width: 230px;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+            width: clamp(17px, 4vw, 20px);
+        }
+        &_appLogo {
+            width: clamp(116px, 4vw, 140px);
+        }
+    }
+    .header_secondPart {
+        width: 86%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            width: 17%;
+            @include flex_mixins.center_j_d(space-between);
+            &_otherLogos {
+                width: 72%;
+                @include flex_mixins.center_j_d(space-between);
+
+                &_notificationContainer {
+                    position: relative;
+
+                    &_icon {
+                        top: -5px;
+                        left: 8px;
+                        position: absolute;
+                    }
+                }
+            }
+            &_userIcon {
+                width: clamp(35px, 4vw, 40px);
+            }
+        }
+    }
+
+    .search_container {
+        position: relative;
+        width: 51.5%;
+        @include flex_mixins.center_j_d(initial);
+        height: clamp(35px, 3vw, 40px);
+
+        &_field {
+            color: rgb(48, 56, 76);
+
+            font-weight: 400;
+            width: 100%;
+            height: inherit;
+            padding: 12px 45px 12px 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            border-radius: 22px;
+            background: rgb(235, 235, 235);
+            opacity: 0.3;
+        }
+        &_logo {
+            position: absolute;
+
+            right: 18px;
+            width: 16px;
+        }
+    }
+}
+@media (1024px <= width < 1441px) {
+    .header_icons_wrapper {
+        @include flex_mixins.center_j_d(center);
+        height: 50px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+    }
+    .header_firstPart {
+        width: 9.7%;
+        min-width: 180px;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+            width: clamp(17px, 4vw, 20px);
+        }
+        &_appLogo {
+            width: clamp(116px, 4vw, 140px);
+        }
+    }
+    .header_secondPart {
+        width: 77%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            @include flex_mixins.center_j_d(space-between);
+            &_otherLogos {
+                display: none;
+            }
+            &_userIcon {
+                width: clamp(35px, 4vw, 40px);
+            }
+        }
+    }
+
+    .search_container {
+        position: relative;
+        width: 85%;
+        @include flex_mixins.center_j_d(initial);
+        height: clamp(35px, 3vw, 40px);
+
+        &_field {
+            color: rgb(48, 56, 76);
+
+            font-weight: 400;
+            width: 100%;
+            height: inherit;
+            padding: 12px 45px 12px 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            border-radius: 22px;
+            background: rgb(235, 235, 235);
+            opacity: 0.3;
+        }
+        &_logo {
+            position: absolute;
+
+            right: 18px;
+            width: 16px;
+        }
+    }
+}
+@media (768px <= width < 1025px) {
+    .header {
+        padding: 0px 17px 0px 17px;
+    }
+    .header_firstPart {
+        width: 19%;
+        min-width: 180px;
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+            width: clamp(17px, 4vw, 20px);
+        }
+        &_appLogo {
+            width: clamp(116px, 4vw, 140px);
+        }
+    }
+    .header_secondPart {
+        width: 75%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            @include flex_mixins.center_j_d(space-between);
+            &_otherLogos {
+                display: none;
+            }
+            &_userIcon {
+                display: none;
+            }
+        }
+    }
+
+    .search_container {
+        position: relative;
+        width: 100%;
+        @include flex_mixins.center_j_d(initial);
+        height: clamp(35px, 3vw, 40px);
+
+        &_field {
+            color: rgb(48, 56, 76);
+
+            font-weight: 400;
+            width: 100%;
+            height: inherit;
+            padding: 12px 45px 12px 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            border-radius: 22px;
+            background: rgb(235, 235, 235);
+            opacity: 0.3;
+        }
+        &_logo {
+            position: absolute;
+
+            right: 18px;
+            width: 16px;
+        }
+    }
+}
+@media (769px > width) {
+    .header {
+        padding: 12px 20px 12px 16px;
+
+        height: 49px;
+    }
+    .header_firstPart {
+        @include flex_mixins.center_j_d(space-between);
+
+        &_menu {
+            display: none;
+        }
+        &_appLogo {
+            width: clamp(116px, 4vw, 140px);
+        }
+    }
+    .header_secondPart {
+        width: 20%;
+        @include flex_mixins.center_j_d(space-between);
+        &_wrapper {
+            @include flex_mixins.center_j_d(space-between);
+            &_otherLogos {
+                display: none;
+            }
+            &_userIcon {
+                display: none;
+            }
+            &_dotsIcon {
+                display: block;
+            }
+        }
+    }
+
+    .search_container {
+        @include flex_mixins.center_j_d(initial);
+
+        &_field {
+            display: none;
+        }
+        &_logo {
+            position: static;
+            width: 16px;
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+@media (235px > width) {
+    .search_container {
+        &_logo {
+            display: none;
+        }
+    }
+}

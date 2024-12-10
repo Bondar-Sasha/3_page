@@ -1,0 +1,22 @@
+:root {
+    --font_26: 26px;
+    --font_18: 18px;
+    --font_16: 16px;
+    --font_13: 13px;
+}
+
+html {
+    font-family: 'Mulish', sans-serif;
+    scrollbar-width: none;
+}
+body {
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+input,
+button {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}

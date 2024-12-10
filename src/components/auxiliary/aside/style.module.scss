@@ -1,0 +1,122 @@
+@use '../sharedStyles/mixins/flex.scss' as flex_mixins;
+@use '../sharedStyles/extends/flex.scss';
+
+// @include flex_mixins.center_j_d(space-between);
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+@media (width >= 1200px) {
+    .aside {
+        position: fixed;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        right: 0px;
+        top: 84px;
+        padding-right: 70px;
+        padding-top: 14px;
+        height: calc(100vh - 84px);
+        width: 437px;
+
+        &_header {
+            margin-bottom: 25px;
+            @include flex_mixins.center_j_d(space-between);
+
+            &_name {
+                color: rgb(25, 32, 44);
+                font-size: 36px;
+                font-weight: 700;
+            }
+            &_autoplayContainer {
+                width: 148px;
+                align-self: flex-end;
+                @include flex_mixins.center_j_d(space-between);
+
+                &_label {
+                    color: rgb(25, 32, 44);
+                    // align-self: flex-end;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: -1px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &_videos {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+@media (1200px > width >= 500px) {
+    .aside {
+        position: initial;
+        justify-content: center;
+        width: 100vw;
+        padding: 0 16px;
+        margin-top: 20px;
+
+        &_header {
+            margin-bottom: 25px;
+            @include flex_mixins.center_j_d(space-between);
+
+            &_name {
+                color: rgb(25, 32, 44);
+                font-size: 36px;
+                font-weight: 700;
+            }
+            &_autoplayContainer {
+                width: 148px;
+                align-self: flex-end;
+                @include flex_mixins.center_j_d(space-between);
+
+                &_label {
+                    color: rgb(25, 32, 44);
+                    // align-self: flex-end;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: -1px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &_videos {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+@media (width < 500px) {
+    .aside {
+        padding: 0 16px;
+
+        margin-top: 20px;
+
+        &_header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 13px;
+            &_name {
+                font-size: 20px;
+            }
+            &_autoplayContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 99px;
+                &_label {
+                    font-size: 10px;
+                }
+            }
+        }
+        &_videos {
+        }
+    }
+}

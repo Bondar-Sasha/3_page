@@ -1,0 +1,11 @@
+#root {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    scrollbar-width: none;
+}
+
+#root > * {
+    box-sizing: border-box;
+}
